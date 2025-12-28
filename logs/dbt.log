@@ -1,0 +1,66 @@
+[0m06:14:31.799611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713a219750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713a36fc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713cea4c90>]}
+
+
+============================== 06:14:31.803288 | 1c41d1ad-cc7c-4265-b8c9-4741089ab028 ==============================
+[0m06:14:31.803288 [info ] [MainThread]: Running with dbt=1.10.10
+[0m06:14:31.803788 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'empty': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'printer_width': '80', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'quiet': 'False', 'profiles_dir': '/home/ode3a/.dbt', 'no_print': 'None', 'write_json': 'True', 'invocation_command': 'dbt init dbt', 'fail_fast': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'partial_parse': 'True', 'log_path': 'logs', 'cache_selected_only': 'False'}
+[0m06:17:38.903155 [error] [MainThread]: Encountered an error:
+
+[0m06:17:38.917629 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/dbt/cli/requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m06:17:38.920600 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 187.16621, "process_in_blocks": "103864", "process_kernel_time": 0.179865, "process_mem_max_rss": "123300", "process_out_blocks": "16", "process_user_time": 1.709188}
+[0m06:17:38.921554 [debug] [MainThread]: Command `dbt init` failed at 06:17:38.921351 after 187.17 seconds
+[0m06:17:38.922344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713fb27c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713a08b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713a36f750>]}
+[0m06:17:38.923160 [debug] [MainThread]: Flushing usage events
+[0m06:17:45.776829 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:17:56.083221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbea18a550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbea189510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbea4126d0>]}
+
+
+============================== 06:17:56.085632 | 513b808f-1c96-49bf-b0fc-cbe7c893c19a ==============================
+[0m06:17:56.085632 [info ] [MainThread]: Running with dbt=1.10.10
+[0m06:17:56.086083 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init', 'quiet': 'False', 'log_path': 'logs', 'profiles_dir': '/home/ode3a/.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'debug': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'empty': 'None', 'version_check': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_format': 'default'}
+[0m06:18:02.769464 [debug] [MainThread]: Starter project path: /home/ode3a/anaconda3/envs/data_eng/lib/python3.11/site-packages/dbt/include/starter_project
+[0m06:18:02.777336 [info ] [MainThread]: 
+Your new dbt project "marketplace_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m06:18:02.779155 [info ] [MainThread]: Setting up your profile.
+[0m06:24:56.693586 [info ] [MainThread]: Profile marketplace_analytics written to /home/ode3a/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m06:24:56.694899 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 420.65906, "process_in_blocks": "9784", "process_kernel_time": 0.147853, "process_mem_max_rss": "127164", "process_out_blocks": "80", "process_user_time": 1.822196}
+[0m06:24:56.695435 [debug] [MainThread]: Command `dbt init` succeeded at 06:24:56.695333 after 420.66 seconds
+[0m06:24:56.695835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbefc23b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbefcd4210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbea473650>]}
+[0m06:24:56.696266 [debug] [MainThread]: Flushing usage events
+[0m06:25:03.713016 [debug] [MainThread]: An error was encountered while trying to flush usage events
